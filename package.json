@@ -1,0 +1,26 @@
+{
+  "name": "validator",
+  "version": "1.0.0",
+  "description": "This is a simple data validation package which can be used to validate simple data structures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thembamalungani/data-validator-js.git"
+  },
+  "keywords": [
+    "validattion",
+    "javascript",
+    "validation",
+    "form",
+    "validator"
+  ],
+  "author": "Themba Malungani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thembamalungani/data-validator-js/issues"
+  },
+  "homepage": "https://github.com/thembamalungani/data-validator-js#readme"
+}
