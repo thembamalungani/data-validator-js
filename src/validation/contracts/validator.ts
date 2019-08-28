@@ -1,11 +1,13 @@
+import Message from "../message";
+
 /**
  * This is the contract that every class which can be regarded as a
  * validator should conform to.
  *
  * @since 1.0.0
+ * @author Themba Malungani <themba.clarence@gmail.com>
+ * @license MIT
  */
-import Message from "../message";
-
 export default interface Validator {
     /**
      * Asserts whether the data under validation satisfies
