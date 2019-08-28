@@ -59,8 +59,16 @@ export default class AttributeValidator extends ValidatesAttributes implements V
         return this;
     }
 
-    private validateAttribute(attribute: String, rule: String, data: Object) {
-
+    /**
+     * Performs validation
+     *
+     * @param attribute
+     * @param rule
+     * @param data
+     * @returns Boolean
+     */
+    private validateAttribute(attribute: String, rule: String) : Boolean{
+        return true
     }
 
     /**
@@ -69,6 +77,6 @@ export default class AttributeValidator extends ValidatesAttributes implements V
      * @param data
      */
     private getValue(attribute, data = null): any {
-
+        return
     }
 }
