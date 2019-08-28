@@ -6,11 +6,10 @@ import Rule from "./rule";
  * @licence MIT
  */
 export default class ValidationRuleParser {
-
     /**
      * Parses the rule string returns a `Rule` object
      *
-     * @param rule
+     * @param rule String
      * @returns Rule
      */
     parse(rule: String) : Rule {
@@ -21,7 +20,7 @@ export default class ValidationRuleParser {
     /**
      * Determines whether the passed validation rule string has parameters
      *
-     * @param rule
+     * @param rule String
      * @returns Boolean
      */
     private hasParameters(rule: String) : Boolean {
@@ -31,17 +30,17 @@ export default class ValidationRuleParser {
     /**
      * Converts the rule parameters csv into an array
      *
-     * @param parameter
+     * @param parameter String
      * @returns []
      */
-    private parseParameters(parameter: string) {
+    private parseParameters(parameter: String) {
         return parameter.split(',');
     }
 
     /**
      * Extracts parameters from validation rule string
      *
-     * @param rule
+     * @param rule String
      */
     private extractParameters(rule: String) : any {
         let parameters: String[];

@@ -8,10 +8,8 @@ export default class Rule {
     public parameters: String[];
 
     /**
-     * Default constructor
-     *
-     * @param name
-     * @param parameters
+     * @param name String
+     * @param parameters String[]
      */
     constructor (name: String, parameters: String[]) {
         this.name = name;
@@ -21,10 +19,10 @@ export default class Rule {
     /**
      * Create a validation rule object `Rule` from rule string and parameters
      *
-     * @param rule
-     * @param parameters
+     * @param rule String
+     * @param parameters String[]
      */
-    static from(rule: String, parameters: any[]) {
+    static from(rule: String, parameters: String[]) {
         return new Rule(rule, parameters);
     }
 }

@@ -18,11 +18,9 @@ export default class AttributeValidator extends ValidatesAttributes implements V
     protected failedRules: {attribute: String, rule: String}[];
 
     /**
-     * Default constructor
-     *
-     * @param data
-     * @param rules
-     * @param customMessages
+     * @param data Object
+     * @param rules RuleDefinition[]
+     * @param customMessages AttributeRuleMessageDefinition[]
      */
     constructor(data: Object, rules: RuleDefinition[], customMessages: AttributeRuleMessageDefinition[]) {
         super()
@@ -62,9 +60,8 @@ export default class AttributeValidator extends ValidatesAttributes implements V
     /**
      * Performs validation
      *
-     * @param attribute
-     * @param rule
-     * @param data
+     * @param attribute String
+     * @param rule String
      * @returns Boolean
      */
     private validateAttribute(attribute: String, rule: String) : Boolean{
@@ -73,10 +70,11 @@ export default class AttributeValidator extends ValidatesAttributes implements V
 
     /**
      *
-     * @param attribute
-     * @param data
+     * @param attribute String
+     * @param data []
+     * @returns any
      */
-    private getValue(attribute, data = null): any {
+    private getValue(attribute: String, data: [] = null): any {
         return
     }
 }

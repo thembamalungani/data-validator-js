@@ -7,14 +7,24 @@
  */
 export default class ValidatesAttributes {
     /**
-     * Validates if the size of the attribute satisfies the configured size.
+     * Validate that the attribute has a value which is not null or empty
      *
      * @param attribute
      * @param value
-     * @param parameters
      * @return Boolean
      */
-    validateMax (attribute, value, parameters): Boolean {
+    validateRequired(attribute: String, value: any): Boolean {
+        return true
+    }
+    /**
+     * Validates if the size of the attribute satisfies the configured size.
+     *
+     * @param attribute String
+     * @param value any
+     * @param parameters []
+     * @return Boolean
+     */
+    validateMax (attribute: String, value: any, parameters: any): Boolean {
         if (value == null) { return true; }
         return value <= this.parseInt(parameters[0])
     }
@@ -22,10 +32,11 @@ export default class ValidatesAttributes {
     /**
      * Validates if the parsed value is of type `number`
      *
-     * @param attribute
-     * @param value
+     * @param attribute String
+     * @param value any
+     * @return Boolean
      */
-    validateNumber(attribute, value): Boolean {
+    validateNumber(attribute: String, value: any): Boolean {
         try {
             this.parseInt(value,0, true)
             return true
