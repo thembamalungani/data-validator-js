@@ -5,6 +5,8 @@
  * @author Themba Malungani <themba.clarence@gmail.com>
  * @licence MIT
  */
+import Integer from "../../support/integer";
+
 export default class ValidatesAttributes {
     /**
      * Validate that the attribute has a value which is not null or empty
@@ -26,7 +28,7 @@ export default class ValidatesAttributes {
      */
     validateMax (attribute: String, value: any, parameters: any): Boolean {
         if (value == null) { return true; }
-        return value <= this.parseInt(parameters[0])
+        return value <= Integer.parseInt(parameters[0])
     }
 
     /**
@@ -38,25 +40,10 @@ export default class ValidatesAttributes {
      */
     validateNumber(attribute: String, value: any): Boolean {
         try {
-            this.parseInt(value,0, true)
+            Integer.parseInt(value,0, true)
             return true
         } catch(e) {
             return false
         }
-    }
-
-    /**
-     * Used to parse a value into a number, returns the default if
-     * value cannot be parsed into an integer
-     *
-     * @param value
-     * @param defaultValue
-     * @return number
-     */
-    parseInt(value: any, defaultValue: number = 0, fail: Boolean = true): number {
-        let parsedValue = parseInt(value)
-        if ( !isNaN(parsedValue) && !fail) return parsedValue
-        if ( fail ) throw new Error('Value: [' + value + '] Cannot be converted to number')
-        return defaultValue
     }
 };
